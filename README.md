@@ -24,5 +24,8 @@ Part B's logic can be called from the following function `minimaxalg()` in
 when the AI is set to 3. `minimaxalg()` is a recursive function and I utilized
 a recursive way to solve the problem.
 
+I wrote my code and ran it using Python 3 but you should be fine running this 
+with Python2.7 I think
 
+To run the game just simply run: `python TicTacProjac_complete.py`
 
