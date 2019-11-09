@@ -25,7 +25,21 @@ boardCanvas = tkinter.Canvas(game, width = 640, height = 640)#Initialize TKinter
 AIturn = 0 #AI goes second
 boardImage = PIL.ImageTk.PhotoImage(image = PIL.Image.fromarray(board))  #Load Board
 boardCanvas.create_image(50, 89,anchor= tkinter.NW,  image=boardImage)
-aiSkill = 3 #Change to 0 for no AI, Change to 1 for Easy, Change to 2 for Medium, 3 for Hard
+
+
+
+
+###################################################################################################
+############ YOU MUST CHANGE THIS TO TEST PART A AND B OF THE HW
+aiSkill = 3 # Change to 0 for no AI
+            # Change to 1 for Easy
+            # Change to 2 for checkWinPos() based logic on selecting a tic tac toe position         MUST DO
+            # Change to 3 for minimax algorithm implementation                                      MUST DO
+###################################################################################################
+
+
+
+
 # Easy follows optimal move pattern if no places are marked
 # Medium is easy with additional conditional statements
 # Hard uses the MiniMax algorithm
