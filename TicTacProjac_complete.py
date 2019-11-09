@@ -11,9 +11,9 @@ import cv2
 import PIL.Image, PIL.ImageTk
 import random
 sys.setrecursionlimit(2000)#Add limit for recursion
-from checkWin_Incomplete import checkWin
-from checkWin_Incomplete import checkWin2
-from checkWin_Incomplete import checkWinPos, minimaxalg
+from checkWin_complete import checkWin
+from checkWin_complete import checkWin2
+from checkWin_complete import checkWinPos, minimaxalg
 game = tkinter.Toplevel()#init board
 game.geometry("350x400+300+300") #set base dimensions
 
@@ -48,7 +48,7 @@ aiX = 0
 def decisionMaker(boardState,minimax,depth):
 
     #Do MiniMax Here
-    actionToTake = minimaxalg(boardState, 2)    # this code exists in the bottom of the checkWin_Incomplete.py file!!!!
+    actionToTake = minimaxalg(boardState, 2)    # this code exists in the bottom of the checkWin_complete.py file!!!!
     return actionToTake[0]
     
 def getPlace():

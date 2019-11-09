@@ -86,6 +86,7 @@ def checkWin2(place):
         
     return [0,0,0]
 
+########################### start of PART A OF PART 2 OF HW5 ###########################
 #Check possibilities for wins in the next move
 def checkWinPos(place):
 
@@ -112,21 +113,9 @@ def determineWinConditions(place, numAssociatedPlayer):
             # then the place with the 0 value is the winning position
             possibleWinRowList.append(winRowPos[rowVals.index(0)])
     return possibleWinRowList
+########################### end of PART A OF PART 2 OF HW5 ###########################
 
-
-def detTerminalState(board, playerNum):
-
-    winSpots = determineWinConditions(board, playerNum)
-    if(len(winSpots)):
-        if(playerNum == 1):     # min is player 1 which is human
-            return (winSpots, -1)
-        elif(playerNum == 2):   # max is player 2 which is AI
-            return (winSpots, 1)
-    if(len(getSpotsOnBoard(board)) == 0):
-            return (None, 0)
-    return (None, None)
-
-
+########################### start of PART B OF PART 2 OF HW5 ###########################
 def determineTerminalState(place, numAssociatedPlayer):
     win3inRowPositions = [(0,1,2),(3,4,5),(6,7,8),(0,3,6),(1,4,7),(2,5,8),(0,4,8),(2,4,6)];
     for winRowPos in win3inRowPositions:
@@ -203,3 +192,4 @@ def minimaxalg(board, playerNum):
             if (scoreObj[1] < lowestScoreObj[1]):
                 lowestScoreObj = scoreObj
         return lowestScoreObj
+########################### end of PART B OF PART 2 OF HW5 ###########################
